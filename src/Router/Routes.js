@@ -6,13 +6,13 @@ import Dashboard from "../Pages/Dashboard";
 import Admin from "../Pages/Admin";
 import SimpleComponent from "../Pages/SimpleComponent";
 
-const PageNotFound = () => <div>Page not found</div>;
+const DefaultRoutePage = () => <div>Default Route - No page selected</div>;
 const ProtectedSimpleComponent = withOidcSecure(SimpleComponent);
 const ProtectedDashboard = withOidcSecure(Dashboard);
 
 const Routes = () => (
     <Switch>
-        <Route exact path="/root">
+        <Route exact path="/home">
             Home
         </Route>
         <Route path="/dashboard">
@@ -32,7 +32,7 @@ const Routes = () => (
         <Route path="/protected2">
             <ProtectedSimpleComponent type="HOC" />
         </Route>
-        <Route component={PageNotFound} />
+        <Route component={DefaultRoutePage} />
     </Switch>
 );
 

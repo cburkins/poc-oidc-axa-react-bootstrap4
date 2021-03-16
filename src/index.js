@@ -21,6 +21,7 @@ const App = () => (
         >
             <Router>
                 <Header />
+                {/* Insert Routes defined in Routes/index.js */}
                 <Routes />
             </Router>
         </AuthenticationProvider>
