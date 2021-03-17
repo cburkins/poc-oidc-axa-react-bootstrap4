@@ -13,7 +13,7 @@ const ProtectedDashboard = withOidcSecure(Dashboard);
 const Routes = () => (
     <Switch>
         <Route exact path="/home">
-            Home
+            <Home />
         </Route>
         <Route path="/dashboard">
             <ProtectedDashboard />

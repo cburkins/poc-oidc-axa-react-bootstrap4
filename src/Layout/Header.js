@@ -1,17 +1,19 @@
 import React from "react";
 import { AuthenticationContext } from "@axa-fr/react-oidc-context";
 import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 
 const headerStyle = {
-    display: "flex",
-    backgroundColor: "#26c6da",
-    justifyContent: "space-between",
-    padding: 10,
+    // display: "flex",
+    // backgroundColor: "#26c6da",
+    // justifyContent: "space-between",
+    // padding: 10,
 };
 
 const linkStyle = {
-    color: "white",
-    textDecoration: "underline",
+    // color: "white",
+    // textDecoration: "underline",
 };
 
 export default () => (
@@ -27,29 +29,23 @@ export default () => (
                         </h3>
 
                         {props.oidcUser || !props.isEnabled ? (
-                            <ul>
-                                <li>
+                            <div>
+                                <ButtonToolbar>
                                     <Link style={linkStyle} to="/dashboard">
-                                        Dashboard
+                                        <Button>Dashboard</Button>
                                     </Link>
-                                </li>
-                                <li>
                                     <Link style={linkStyle} to="/admin">
-                                        Admin
+                                        <Button>Admin</Button>;
                                     </Link>
-                                </li>
-                                <li>
                                     <Link style={linkStyle} to="/protected1">
-                                        Direct Protected
+                                        <Button>Direct Protected</Button>
                                     </Link>
-                                </li>
-                                <li>
                                     <Link style={linkStyle} to="/protected2">
-                                        HOC Protected
+                                        <Button>HOC Protected</Button>
                                     </Link>
-                                </li>
-                                <button onClick={props.logout}>logout</button>
-                            </ul>
+                                    <Button onClick={props.logout}>logout</Button>
+                                </ButtonToolbar>
+                            </div>
                         ) : (
                             <button onClick={props.login}>login</button>
                         )}

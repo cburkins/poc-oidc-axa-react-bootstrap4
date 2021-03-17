@@ -9,6 +9,13 @@ import Header from "./Layout/Header";
 import Routes from "./Router";
 import oidcConfiguration from "./configuration";
 
+import Jumbotron from "react-bootstrap/Jumbotron";
+import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
+import { LinkContainer } from "react-router-bootstrap";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
 const App = () => (
     <div>
         <AuthenticationProvider
