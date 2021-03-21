@@ -1,3 +1,3 @@
-# Sample Application
+# Screenshot
 
-This is a @axa-fr/react-oidc-context sample application
+![image](https://user-images.githubusercontent.com/9342308/111919185-09732780-8a5f-11eb-9799-2ecec4259c9d.png)

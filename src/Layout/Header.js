@@ -32,18 +32,20 @@ export default () => (
                             <div>
                                 <ButtonToolbar>
                                     <Link style={linkStyle} to="/dashboard">
-                                        <Button>Dashboard</Button>
+                                        <Button style={{ margin: "5px" }}>Dashboard</Button>
                                     </Link>
                                     <Link style={linkStyle} to="/admin">
-                                        <Button>Admin</Button>;
+                                        <Button style={{ margin: "5px" }}>Admin</Button>
                                     </Link>
                                     <Link style={linkStyle} to="/protected1">
-                                        <Button>Direct Protected</Button>
+                                        <Button style={{ margin: "5px" }}>Direct Protected</Button>
                                     </Link>
                                     <Link style={linkStyle} to="/protected2">
-                                        <Button>HOC Protected</Button>
+                                        <Button style={{ margin: "5px" }}>HOC Protected</Button>
                                     </Link>
-                                    <Button onClick={props.logout}>logout</Button>
+                                    <Button style={{ margin: "5px" }} onClick={props.logout}>
+                                        logout
+                                    </Button>
                                 </ButtonToolbar>
                             </div>
                         ) : (
